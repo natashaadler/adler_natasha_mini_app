@@ -1,0 +1,23 @@
+//HERO
+
+.hero {
+    width: 100%;
+}
+
+.logo {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    width: 120px;
+    background-color: $main_color;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero_text {
+    margin-top: -200px;
+    font-size: 30px;
+    color: white;
+    box-shadow: 10em 10em 10em $shadow_color;
+    margin-left: 40px;
+}

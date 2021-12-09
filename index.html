@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Natasha Adler - Mini</title>
+</head>
+<body>
+    <div class="site_container" id="app"><!--SITE CONTAINER-->
+        <header>
+            <img class="hero" src="https://86bd04aee645f41c2005-510904abdc95bfe9a6b152d3edc0036b.ssl.cf5.rackcdn.com/Public/img/2016-739165/content/model-page/F56/20/header-en.jpg?v=73je2Rgz1ikH9oDLERlDIXWTApb0-N1Y8dEVn7nOQcE1" alt="header">
+            <p class="hero_text">THE ORIGINAL, REMASTERED.
+                THE MINI 3 DOOR. STARTING FROM $23,490.</p>
+        </header>
+        <img class="logo" src="images/miniLogo.png" alt="log">
+        <section class="items">
+            <div v-if="items1" v-for="item in items1">
+                <div @click="open(item)">
+                    <img :src="`images/${item.image}`" alt="">
+                    <h4>{{ item.title }}</h4>
+                </div>
+            </div>
+
+        </section>
+        <div v-if="focusItem" class="box">
+            <div>
+                <a href="#" @click="close()">Close</a>
+                <br>
+                <img :src="`images/${focusItem.image}`" alt="">
+                <h4>{{ focusItem.title }}</h4>
+                <p>{{ focusItem.body }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js" defer></script>
+<script src="script/main.js" type="module" defer></script>
+</html>

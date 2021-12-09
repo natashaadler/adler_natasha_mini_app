@@ -1,0 +1,19 @@
+//here is where you should import your sass modules
+
+@import "modules/_reset.scss";
+@import "modules/_vars.scss";
+@import "modules/_hero.scss";
+@import "modules/_home.scss";
+ 
+// this is a quick reset for your page
+
+.hidden {
+display: none;
+}
+
+* {
+  font: $font;
+}
+
+//in order for your modules to be updated and watched constantly you need to type in this in the terminal window
+//sass --watch sass:css --style compressed
